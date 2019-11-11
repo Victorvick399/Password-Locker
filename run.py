@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-
+from user import Credentials
 from user import User
 
 def create_account(user_name,password,site):
@@ -27,13 +27,13 @@ def find_account(password):
     '''
     return User.find_account(password)
 
-def find_existing_account(user):
+def find_existing_account(password):
     '''
-    Function that check if a contact exists with that number and return a boolean
+    Function that check if a account exists with that number and return a boolean
     '''
     return User.find_account(password)
 
-def display_accounts():
+def display_account():
     '''
     This function returns all the saved user accounts.
     '''
@@ -43,7 +43,7 @@ def main():
     print("Hello Welcome to your Password storage.What would you like to do?")
 
     while True:
-            print("Use these short codes to further enjoy our app : ca - create a new account, da - display contacts, fa -find an already existing contact, ex -exit the Password")
+            print("Use these short codes to further enjoy our app : ca - create a new account, da - display accounts, fa -find an already existing accounts, ex -exit the Password")
 
             short_code = input().lower()
 
@@ -67,12 +67,12 @@ def main():
 
             elif short_code == 'da':
 
-                    if display_accounts():
+                    if display_account():
                             print("Below is a list of all your saved accounts:")
                             print('\n')
 
-                            for contact in display_accounts():
-                                    print(f"{user.user_name} your password is {user.password} .  '\n' This account belongs to {user.site}")
+                            for user in display_account():
+                                    print(f"{user.user_name} your password is {user.password} .  \n This account belongs to {user.site}")
 
                             print('\n')
                     else:
@@ -87,7 +87,13 @@ def main():
                     searched_password = input()
                     if find_existing_account(searched_password):
                             search_account = find_account(searched_password)
-                            print(f"{search_account.user_name} '\n' {search_account.password}")
+                            print(f"we've found it!!!! \n The username is{search_account.user_name} \n Password is{search_account.password}")
+                            print("Do you want delete this account?? \n Type delete now..")
+                            respo =input().lower().strip()
+                            if respo =="delete" :
+                                search_account.delete_account()
+                            else:
+                                continue
                     else:
                             print("That account does not exist")
 
