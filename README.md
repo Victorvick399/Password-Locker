@@ -18,9 +18,9 @@ I used pyhton only for this application.
 For now there are currently no known bugs of our page but if any arise do not hesitate to contact me.This can be accomplished through our e-mail password12@gmail.com.
 ## Support and contact details
 You can reach us through the following:
-*Email: password@gmail.com<br>
-*Enquiries contacts: 0723 987 654<br> 
-*Whatsapp queries: 0798 123 456
+* Email: password@gmail.com
+* Enquiries contacts: 0723 987 654
+* Whatsapp queries: 0798 123 456
 ### License
 MIT LICENSE
 
