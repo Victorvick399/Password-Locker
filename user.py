@@ -1,3 +1,23 @@
+class Credentials():
+    """
+    This contains more details about the user class.
+    """
+
+    cred_list = []
+
+    def __init__(self,gmail,number):
+        self.gmail = gmail
+        self.number = number
+
+    def save_cred(self):
+        '''
+        This adds
+        '''
+        Credentials.cred_list.append(self)
+
+    # @classmethod
+    # def gen_password(cls)
+
 class User:
     """
     Class for containing all the methods that run the application
