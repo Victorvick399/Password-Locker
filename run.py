@@ -54,8 +54,13 @@ def main():
                     print ("Enter your username ....")
                     user_name = input()
 
-                    print("Enter your password ...")
+                    print("Enter your password or we can also generate one for you just type gen instead of your password.If not just enter your password......")
                     password = input()
+                    if password == "gen":
+                        password = f"@{user_name}12$"
+                        print(password)
+                    else:
+                        password = input
 
                     print("Where is this account from...")
                     site = input()
