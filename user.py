@@ -15,10 +15,6 @@ class Credentials():
         '''
         Credentials.cred_list.append(self)
 
-    @classmethod
-    def gen_password(cls):
-        pass
-
 class User:
     """
     Class for containing all the methods that run the application
