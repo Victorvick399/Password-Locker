@@ -60,7 +60,7 @@ def main():
                         password = f"@{user_name}12$"
                         print(f"Your password is {password}.")
                     else:
-                        password = input
+                        password = input()
 
                     print("Where is this account from...")
                     site = input()
