@@ -15,8 +15,9 @@ class Credentials():
         '''
         Credentials.cred_list.append(self)
 
-    # @classmethod
-    # def gen_password(cls)
+    @classmethod
+    def gen_password(cls):
+        pass
 
 class User:
     """
@@ -27,7 +28,7 @@ class User:
 
     def __init__(self,user_name,password,site):
         self.user_name = user_name
-        self.password= password
+        self.password = password
         self.site = site
 
     def add_account(self):
@@ -40,7 +41,7 @@ class User:
         '''
         delete_user deletes a saved account from user_list.
         '''
-        User.accounts_list.remove(self)
+        User.accounts_list.remove()
 
     @classmethod
     def display_account(cls):
