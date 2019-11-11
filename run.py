@@ -58,7 +58,7 @@ def main():
                     password = input()
                     if password == "gen":
                         password = f"@{user_name}12$"
-                        print(password)
+                        print(f"Your password is {password}.")
                     else:
                         password = input
 
